@@ -121,7 +121,7 @@ fun readParticipants(pathToResource: Path): Participants {
                 "polygon" -> Area.Polygon(
                     areaInfo.split("-")
                         .map { it.trim() }
-                        .map { asPoint(it.substring(1 until it.length)) }
+                        .map { asPoint(it.substring(1 until it.length - 1)) }
                 )
                 else -> error("Unknown area type")
             }
